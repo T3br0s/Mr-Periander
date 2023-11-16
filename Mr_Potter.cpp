@@ -6,7 +6,6 @@
 #include <conio.h>
 #include <queue>
 #include <algorithm>
-#include <windows.h>
 #include <chrono>
 #include <thread>
 
@@ -96,9 +95,8 @@ bool MazeGame::isValidMove(int x, int y) {
 
 void MazeGame::movePlayer(char direction) {
     char playerMove;
-    cout << "Κίνηση Μπάμπη (w/a/s/d): ";
+    cout << "Κίνηση Periander (w/a/s/d): ";
     cin >> playerMove;
-
     int newX = playerX;
     int newY = playerY;
 
@@ -230,8 +228,60 @@ void MazeGame::playGame() {
 }
 
 int main() {
-    MazeGame game("Maze2.txt"); //switch to any Maze (1-10) as desired
-    game.playGame();
+    int map;
+    cout << "Pick your Map(1-10): ";
+    cin >> map;
+    if (map == 1){
+            MazeGame game("Maze1.txt");
+            game.playGame();
+        
+    }
+    else if (map == 2){
+            MazeGame game("Maze2.txt");
+            game.playGame();
+        
+    }
+    else if (map == 3){
+            MazeGame game("Maze3.txt");
+            game.playGame();
+        
+    }
+    else if (map == 4){
+            MazeGame game("Maze4.txt");
+            game.playGame();
+        
+    }
+    else if (map == 5){
+            MazeGame game("Maze5.txt");
+            game.playGame();
+        
+    }
+    else if (map == 6){
+            MazeGame game("Maze6.txt");
+            game.playGame();
+        
+    }else if (map == 7){
+            MazeGame game("Maze7.txt");
+            game.playGame();
+        
+    }else if (map == 8){
+            MazeGame game("Maze8.txt");
+            game.playGame();
+        
+    }
+    else if (map == 9){
+            MazeGame game("Maze9.txt");
+            game.playGame();
+        
+    }else if (map == 10){
+            MazeGame game("Maze10.txt");
+            game.playGame();
+    }
+    else {
+        cout << "FATAL ERROR";
+        return 0;
+    }
+    
 
     return 0;
 }
